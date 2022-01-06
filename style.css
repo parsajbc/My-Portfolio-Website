@@ -18,7 +18,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 7%;
+    padding: 5px 7%;
 }
 
 .logo{
@@ -61,6 +61,120 @@ header{
 /* ----------------------------------------------- */
 /* End of styling the header */
 /* ----------------------------------------------- */
+
+:root {
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+body {
+    background: #0b0c10;
+    color: #c5c6c7;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: 900
+}
+
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.title {
+    margin-bottom: .25em;
+}
+
+.title--intro {
+    font-weight: 300;
+}
+
+.title--intro strong {
+    display: block;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.subtitle--intro {
+    background: #66fcf1;
+    padding: .25em 1em;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 1em;
+    color: #0b0c10;
+}
+
+.intro {
+    position: relative;
+}
+
+.intro_img {
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+.subtitle--intro {
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    
+    .intro_img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }    
+    
+    .subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -3em;
+        width: calc(100% + 1.5em);
+    }
+}
 
 
 
