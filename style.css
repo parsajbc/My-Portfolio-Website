@@ -111,8 +111,8 @@ body {
 }
 
 section {
-    padding: 7em 2em;
-    border-bottom: 5px solid #c5c6c7;
+    padding: 7em 2em 4em 2em;
+    border-bottom: 2px solid #c5c6c7;
 }
 
 img {
@@ -160,10 +160,12 @@ h3 { font-size: var(--fs-h3) }
 
 .intro {
     position: relative;
+    padding: 10em 2em;
+    border-bottom: 5px solid #c5c6c7;
 }
 
 .intro_img {
-    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    box-shadow: 1em 1em 1.5em rgba(238, 238, 238, 0.1), 0.125em 0.125em 0.25em rgba(233, 233, 233, 0.1);
 }
 
 .subtitle--intro {
@@ -252,7 +254,7 @@ h3 { font-size: var(--fs-h3) }
 
 
 /* ----------------------------------------------- */
-/* End of styling the about me page */
+/* End of styling the about me section */
 /* ----------------------------------------------- */
 
 
@@ -341,6 +343,61 @@ h3 { font-size: var(--fs-h3) }
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 600ms;
 }
+
+.exp{
+    font-size: 7rem;
+    color: #66fcf1;
+}
+
+/* ----------------------------------------------- */
+/* End of styling the experience section */
+/* ----------------------------------------------- */
+
+
+.footer {
+    background: #0b0c10;
+    color: #66fcf1;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.5rem;
+
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+
+
+
+
+
+
 
 
 
