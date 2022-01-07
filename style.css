@@ -112,6 +112,7 @@ body {
 
 section {
     padding: 7em 2em;
+    border-bottom: 5px solid #c5c6c7;
 }
 
 img {
@@ -250,8 +251,96 @@ h3 { font-size: var(--fs-h3) }
 }
 
 
+/* ----------------------------------------------- */
+/* End of styling the about me page */
+/* ----------------------------------------------- */
 
 
+.logo-list{
+    align-items: center;
+    text-align: center;
+    background-color: #0b0c10;
+    background-image: url(img/programing.jpg);
+    background-size: cover;
+    color: #edf0f3;
+}
+
+.title--logos{
+    color: #edf0f3;
+    position: relative;
+}
+
+.title--logos::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: #fff;
+    opacity: 0.25;
+}
+
+.logos{
+    margin-bottom: 6.5em;
+}
+
+.app_logo{
+    height: 100px;
+}
+
+.logo_container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 800px) {
+    .logos {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .app_logo + .app_logo {
+        margin-left: 2em;
+    }
+}
+
+.logo_container .tooltiptext{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 600ms;
+    width: 120px;
+    background-color: rgba(197, 198, 199, 0.2);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.logo_container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.logo_container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 600ms;
+}
 
 
 

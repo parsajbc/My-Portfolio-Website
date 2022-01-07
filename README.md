@@ -1,1 +1,1 @@
-This reposetory contains my portfolio website files
+This repository contains my portfolio website files
