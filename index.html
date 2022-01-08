@@ -16,8 +16,8 @@
 </head>
 
 <body>
-    <header class="headr">
-        <img class="logo" src="img/white logo.png" height="50" width="181" alt="Parsa Jadda">
+    <header class="headr" id="MyNav">
+        <p class="name_logo">> Parsa Jadda_</p>
         <nav>
             <ul class="nav_links">
                 <li class="header_item"><a class="header_a" href="#home">Home</a></li>
@@ -26,7 +26,7 @@
                 <li class="header_item"><a class="header_a" href="#">Projects</a></li>
             </ul>
         </nav>
-        <a class="contact" href="#"><button class="header_button">Contact</button></a>
+        <button class="header_button contact" id="myBtn">Contact</button>
     </header>
 
     <!--intro-->
@@ -82,7 +82,7 @@
                 <span class="tooltiptext">JAVA</span>
             </div>
             <div class="logo_container">
-                <i class="fab fa-github exp"></i>
+                <i class="fab fa-git-alt exp"></i>
                 <span class="tooltiptext">Git</span>
             </div>
             <div class="logo_container">
@@ -114,13 +114,47 @@
     <!-- <section></section> -->
 
     <!--contacts-->
-    <!-- <section></section> -->
+    <div id="Mycontacts" class="contacts">
+        <div class="contact-content">
+            <a href="#" class="resume_link">
+                <h2 class="title title--resume">My Resume</h2>
+            </a>
+            <ul class="social-list">
+                <li class="social-list__icon">
+                    <a href="mailto:Parsajbc@gmail.com">
+                        <i class="fa fa-envelope iconcolor switch"></i>
+                    </a>
+                </li>
+                <li class="social-list__icon">
+                    <a href="
+                        Parsa Jadda (@parsajbc) • Instagram photos and videoshttps://www.instagram.com › parsajbc">
+                        <i class="fab fa-instagram iconcolor switch"></i>
+                    </a>
+                </li>
+                <li class="social-list__icon">
+                    <a href="https://ca.linkedin.com/in/parsa-jadda-259865211">
+                        <i class="fab fa-linkedin iconcolor switch"></i>
+                    </a>
+                </li>
+                <li class="social-list__icon">
+                    <a href="https://github.com/parsajbc">
+                        <i class="fab fa-github iconcolor switch"></i>
+                    </a>
+                </li>
+                <li class="social-list__icon">
+                    <span class="close">
+                        <i class="fas fa-times iconcolor switch"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!--footer-->
     <footer class="footer">
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="Parsajbc@gmail.com">
+                <a class="social-list__link" href="mailto:Parsajbc@gmail.com">
                     <i class="fa fa-envelope"></i>
                 </a>
             </li>
@@ -142,6 +176,7 @@
             </li>
         </ul>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
