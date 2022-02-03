@@ -451,6 +451,96 @@ h3 { font-size: var(--fs-h3) }
 /* ----------------------------------------------- */
 
 
+.projects{
+    text-align: center;
+}
+
+.title--projects {
+    color: #66fcf1;
+    position: relative;
+}
+
+.title--projects::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: #fff;
+    opacity: 0.25;
+    margin-bottom: 7rem;
+}
+
+.project{
+    box-sizing: border-box;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 4rem;
+    height: 350px;
+    border-right: 2px solid rgb(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgb(255, 255, 255, 0.3);
+}
+
+.project_image{
+    width: 40%;
+    height: 300px;
+    background-position:center;
+    background-size: cover;
+    border: 2px solid #edf0f3;
+    z-index: 5;
+    position: absolute;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 1);
+}
+
+.project_title{
+    width: 55%;
+    text-align: center;
+    padding-left: 15%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    size: 40px;
+    color: #66fcf1;
+    background-color: #3b3b3b;
+    border: 1px solid #45a29e;
+    z-index: 4;
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 10px;
+}
+
+.project_description{
+    text-align: center;
+    width: 36%;
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 90px;
+}
+
+.project_link{
+    text-align: center;
+    width: 36%;
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 220px;
+}
+
+.project_languages{
+    text-align: center;
+    width: 42%;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 270px;
+}
+
+
+/* ----------------------------------------------- */
+/* End of styling the Projects */
+/* ----------------------------------------------- */
+
+
+
 .footer {
     background: #0b0c10;
     color: #66fcf1;
