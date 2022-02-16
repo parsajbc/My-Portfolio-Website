@@ -107,7 +107,14 @@ header{
     height: 100%;
     z-index: -2;
     object-fit: cover;
-  }
+    border-bottom: 5px solid #c5c6c7;
+}
+
+@media (max-width: 600px) {
+    #myVideo {
+        display: none;
+    }
+}
 
 
 /* ----------------------------------------------- */
@@ -190,7 +197,21 @@ h3 { font-size: var(--fs-h3) }
 .intro {
     position: relative;
     padding: 10em 2em;
+    padding-top: 6em;
     border-bottom: 5px solid #c5c6c7;
+}
+
+.intro::before{
+    content: "";
+    background: url(img/iphone\ wall.jpg);
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
 }
 
 .intro_img {
@@ -203,6 +224,7 @@ h3 { font-size: var(--fs-h3) }
 
 @media (min-width: 600px) {
     .intro {
+        padding: 10em 2em;
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -211,6 +233,20 @@ h3 { font-size: var(--fs-h3) }
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
+        border-bottom: none;
+    }
+
+    .intro::before{
+        content: "";
+        background: url(img/iphone\ wall.jpeg);
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        display: none;
     }
 
     .large-monitor{
