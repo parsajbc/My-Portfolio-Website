@@ -343,6 +343,13 @@ h3 {
     z-index: 9;
 }
 
+@media (max-width: 600px) {
+    #resume_tab2 {
+        background-color: rgba(86, 233, 223, 0.15);
+        border: transparent;
+    }
+}
+
 #resume_tab2:hover {
     border: 0.2px solid rgba(86, 233, 223, 0);
     background-color: rgba(60, 162, 158, 0.4);
