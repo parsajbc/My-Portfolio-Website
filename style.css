@@ -385,10 +385,10 @@ h3 {
 .res_link {
     box-sizing: border-box;
     position: absolute;
-    top: 15%;
-    left: 20%;
-    width: 60%;
-    height: 60%;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(60, 162, 158, 0);
     border: 0px solid azure;
     transition: 0.5s;
@@ -404,6 +404,15 @@ h3 {
 .res_link:hover {
     border: 1px solid azure;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.resume_image_link {
+    box-sizing: border-box;
+    position: absolute;
+    top: 13%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
 }
 
 
