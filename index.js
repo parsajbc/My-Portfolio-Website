@@ -6,24 +6,27 @@ var btn = document.getElementById("myBtn");
 
 var span = document.getElementsByClassName("close")[0];
 
+var resume = document.getElementById("resume_tab2");
+
 btn.onclick = function () {
     contacts.style.display = "block";
+    resume.style.display = "none";
     navbar.style.display = "none";
 }
 
 span.onclick = function () {
     contacts.style.display = "none";
+    resume.style.display = "block";
     navbar.style.display = "flex";
 }
 
 window.onclick = function (event) {
     if (event.target == contacts) {
         contacts.style.display = "none";
+        resume.style.display = "block";
         navbar.style.display = "flex";
     }
 }
-
-resume = document.getElementById("resume_tab2");
 
 var resScroll = function () {
     var y = window.scrollY;

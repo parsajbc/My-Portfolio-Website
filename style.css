@@ -651,6 +651,14 @@ h3 {
     opacity: 0.25;
 }
 
+@media (max-width: 600px) {
+    .social-list__icon {
+        margin: 0 0.37em;
+    }
+}
+
+
+
 /* ----------------------------------------------- */
 /* End of styling the contacts section */
 /* ----------------------------------------------- */
