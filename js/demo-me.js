@@ -6,7 +6,7 @@ addListeners();
 
 function initHeader() {
     width = window.innerWidth;
-    height = window.innerHeight;
+    height = window.innerHeight * 1.2;
     target = { x: width / 2, y: height / 2 };
 
     canvas = document.getElementById('demo-canvas');
