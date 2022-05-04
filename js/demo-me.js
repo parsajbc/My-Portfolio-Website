@@ -1,4 +1,4 @@
-var width, height, k, canvas, ctx, points, target, colors = [], animateHeader = true;
+var width, height, k, canvas, ctx, points, target, colors = [], animateHeader = true, num_v = 20;
 
 initHeader();
 initAnimation();
@@ -17,14 +17,14 @@ function initHeader() {
     // create points
     points = [];
     var n = 0;
-    for (var x = 0 - width / 20; x < width + width / 20; x = x + width / 20) {
-        for (var y = 0 - height / 20; y < height + height / 20; y = y + height / 20) {
+    for (var x = 0 - width / num_v; x < width + width / num_v; x = x + width / num_v) {
+        for (var y = 0 - height / num_v; y < height + height / num_v; y = y + height / num_v) {
             var regx = x;
             var regy = y;
-            var px = x + Math.random() * width / 20;
-            var py = y + Math.random() * height / 20;
+            var px = x + Math.random() * width / num_v;
+            var py = y + Math.random() * height / num_v;
             if (n == 1) {
-                py += (height / 40);
+                py += (height / (num_v * 2));
             }
             var p = { x: px, originX: px, y: py, originY: py, regx: regx, regy: regy };
             points.push(p);
@@ -44,20 +44,20 @@ function initHeader() {
             for (var j = 0; j < points.length; j++) {
                 var p2 = points[j]
                 if (p1.regx == p2.regx) {
-                    if (p2.regy == p1.regy + height / 20 || p2.regy == p1.regy - height / 20) {
+                    if (p2.regy == p1.regy + height / num_v || p2.regy == p1.regy - height / num_v) {
                         closest.push(p2);
                     }
                 }
-                if (p1.regx % (width / 20) == 0) {
+                if (p1.regx % (width / num_v) == 0) {
                     if (p2.regy == p1.regy) {
-                        if (p2.regx == p1.regx + width / 20 || p2.regx == p1.regx - width / 20) {
+                        if (p2.regx == p1.regx + width / num_v || p2.regx == p1.regx - width / num_v) {
                             closest.push(p2);
                         }
                     }
                 }
-                if (p1.regx % (width / 20) != 0) {
+                if (p1.regx % (width / num_v) != 0) {
                     if (p2.regy == p1.regy) {
-                        if (p2.regx == p1.regx + width / 20 || p2.regx == p1.regx - width / 20) {
+                        if (p2.regx == p1.regx + width / num_v || p2.regx == p1.regx - width / num_v) {
                             closest.push(p2);
                         }
                     }
@@ -157,10 +157,10 @@ function topleftCorner(point) {
     var n = 0;
     for (var i = 0; i < point.closest.length; i++) {
         var p = point.closest[i];
-        if (p.regx == point.regx && p.regy == (point.regy + height / 20)) {
+        if (p.regx == point.regx && p.regy == (point.regy + height / num_v)) {
             n++;
         }
-        if (p.regx == (point.regx + width / 20) && p.regy == point.regy) {
+        if (p.regx == (point.regx + width / num_v) && p.regy == point.regy) {
             n++;
         }
     }
@@ -174,16 +174,16 @@ function fillIn(point) {
     var bottom, right, bottomright;
     for (var i = 0; i < point.closest.length; i++) {
         var p = point.closest[i];
-        if (p.regx == point.regx && p.regy == (point.regy + height / 20)) {
+        if (p.regx == point.regx && p.regy == (point.regy + height / num_v)) {
             bottom = p;
         }
-        if (p.regx == (point.regx + width / 20) && p.regy == point.regy) {
+        if (p.regx == (point.regx + width / num_v) && p.regy == point.regy) {
             right = p;
         }
     }
     for (var i = 0; i < bottom.closest.length; i++) {
         var p = bottom.closest[i];
-        if (p.regx == (bottom.regx + width / 20) && p.regy == bottom.regy) {
+        if (p.regx == (bottom.regx + width / num_v) && p.regy == bottom.regy) {
             bottomright = p;
             break;
         }
