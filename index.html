@@ -33,9 +33,10 @@
     </header>
 
     <!--intro-->
-    <video autoplay muted loop id="myVideo">
+    <!-- <video autoplay muted loop id="myVideo">
         <source src="img/Black.mp4" type="video/mp4">
-    </video>
+    </video> -->
+    <canvas id="demo-canvas" style="top: 0; left: 0; z-index: -5; position: fixed;"></canvas>
 
     <section class="intro" id="home">
         <h1 class=" title title--intro">
@@ -103,6 +104,16 @@
             <p class="project_link">Link: <a style="color: antiquewhite; text-decoration: none;"
                     href="https://parsajbc.github.io/tierio/" target="_blank">https://parsajbc.github.io/tierio/</a></p>
             <p class="project_languages">HTML, Javascript, CSS</p>
+        </div>
+        <div class="project">
+            <div class="project_image" style="background-image: url('img/Froger.png');">&nbsp;</div>
+            <h3 class="project_title">Froger</h3>
+            <p class="project_description">In this project I used MIPS assembly language to create the classic arcade
+                game froger. The program was written and tested on Mars (MIPS Assembler and Runtime Simulator) with the
+                help of bitmap displays and keybord inputs.</p>
+            <p class="project_link">Link: <a style="color: antiquewhite; text-decoration: none;"
+                    href="https://parsajbc.github.io/tierio/" target="_blank">https://parsajbc.github.io/tierio/</a></p>
+            <p class="project_languages">MIPS Assembly Language</p>
         </div>
         <div class="project">
             <div class="project_image" style="background-image: url('img/Tower\ Block.png');">&nbsp;</div>
@@ -216,7 +227,10 @@
             </li>
         </ul>
     </footer>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/demo-me.js"></script>
 </body>
 
 </html>
