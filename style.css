@@ -244,6 +244,7 @@ h3 {
         display: grid;
         width: min-content;
         margin: 0 auto;
+        margin-bottom: 2em;
         grid-column-gap: 1em;
         grid-template-areas:
             "img title"
